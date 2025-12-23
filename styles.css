@@ -640,8 +640,8 @@ button {
 
 .image-frame {
     position: relative;
-    background: var(--bg-tertiary);
-    border: 1px solid var(--border-color);
+    background: transparent;
+    border: none;
     border-radius: var(--radius-lg);
     overflow: hidden;
     aspect-ratio: 4/5;
