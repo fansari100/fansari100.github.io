@@ -670,14 +670,7 @@ button {
 }
 
 .image-decoration {
-    position: absolute;
-    inset: -20px -20px auto auto;
-    width: 60%;
-    height: 60%;
-    border: 2px solid var(--accent-primary);
-    border-radius: var(--radius-lg);
-    z-index: -1;
-    opacity: 0.3;
+    display: none;
 }
 
 /* ============================================
