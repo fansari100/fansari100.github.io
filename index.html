@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricky Ansari | Software Engineer & Quantitative Developer</title>
+    <meta name="description" content="Full-stack Software Engineer specializing in Machine Learning, Quantitative Finance, and Production Systems">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-grid"></div>
+    <div class="bg-glow"></div>
+    
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-bracket">{</span>
+                <span class="logo-text">RA</span>
+                <span class="logo-bracket">}</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="pulse"></span>
+                Available for opportunities
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line">Hi, I'm</span>
+                <span class="title-name">Ricky Ansari</span>
+            </h1>
+            <p class="hero-subtitle">
+                <span class="typewriter" id="typewriter"></span>
+                <span class="cursor">|</span>
+            </p>
+            <p class="hero-description">
+                Building intelligent systems at the intersection of 
+                <span class="highlight">machine learning</span>, 
+                <span class="highlight">quantitative finance</span>, and 
+                <span class="highlight">full-stack development</span>.
+            </p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">
+                    <span>View Projects</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number" data-target="140">0</span>
+                    <span class="stat-suffix">%</span>
+                    <span class="stat-label">Algo Trading Returns</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-target="50">0</span>
+                    <span class="stat-suffix">+</span>
+                    <span class="stat-label">Tickers Analyzed</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-target="5">0</span>
+                    <span class="stat-suffix">+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="code-window">
+                <div class="code-header">
+                    <div class="code-dots">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <span class="code-title">strategy.py</span>
+                </div>
+                <pre class="code-content"><code><span class="code-keyword">class</span> <span class="code-class">QuantStrategy</span>:
+    <span class="code-keyword">def</span> <span class="code-function">__init__</span>(<span class="code-param">self</span>):
+        <span class="code-param">self</span>.model = TransformerModel()
+        <span class="code-param">self</span>.risk = RiskManager()
+    
+    <span class="code-keyword">async def</span> <span class="code-function">execute</span>(<span class="code-param">self</span>, signal):
+        <span class="code-keyword">if</span> <span class="code-param">self</span>.risk.validate(signal):
+            <span class="code-keyword">return await</span> <span class="code-param">self</span>.trade(signal)
+        <span class="code-keyword">return</span> <span class="code-string">"Risk limit reached"</span></code></pre>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">01</span>
+                <h2 class="section-title">About Me</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-intro">
+                        I'm a <strong>Full-Stack Software Engineer</strong> with deep expertise in 
+                        <strong>quantitative finance</strong> and <strong>machine learning systems</strong>.
+                    </p>
+                    <p>
+                        My work spans from building production-grade trading algorithms that have 
+                        generated <strong>140%+ returns</strong> on paper trading portfolios, to 
+                        architecting scalable full-stack applications that serve thousands of users.
+                    </p>
+                    <p>
+                        I specialize in the intersection of finance and technology—developing 
+                        Transformer-based prediction models, implementing reinforcement learning 
+                        for dynamic portfolio optimization, and building robust backtesting frameworks 
+                        that follow rigorous ML principles (no lookahead bias).
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">🎓</div>
+                            <div class="highlight-text">
+                                <strong>Education</strong>
+                                <span>MS in Financial Engineering</span>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">💼</div>
+                            <div class="highlight-text">
+                                <strong>Focus Areas</strong>
+                                <span>ML Systems, Quant Finance, Full-Stack</span>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">📍</div>
+                            <div class="highlight-text">
+                                <strong>Location</strong>
+                                <span>United States</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-frame">
+                        <div class="image-placeholder">
+                            <span class="initials">RA</span>
+                        </div>
+                        <div class="image-decoration"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">02</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1: Quant Trading System -->
+                <article class="project-card featured">
+                    <div class="project-image">
+                        <div class="project-visual quant-visual">
+                            <div class="chart-line"></div>
+                            <div class="chart-bars">
+                                <span style="--height: 60%"></span>
+                                <span style="--height: 80%"></span>
+                                <span style="--height: 45%"></span>
+                                <span style="--height: 90%"></span>
+                                <span style="--height: 70%"></span>
+                                <span style="--height: 95%"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-tag">Featured</span>
+                            <span class="project-category">Quantitative Finance</span>
+                        </div>
+                        <h3 class="project-title">Algorithmic Trading System</h3>
+                        <p class="project-description">
+                            Production-grade quantitative trading platform featuring Temporal Fusion 
+                            Transformers, ensemble learning (TFT + LSTM + Gradient Boosting), and 
+                            PPO-based reinforcement learning for dynamic threshold optimization. 
+                            Achieved <strong>140% returns</strong> on $100K paper trading portfolio.
+                        </p>
+                        <ul class="project-features">
+                            <li>Market-neutral long/short strategy with 50+ ticker universe</li>
+                            <li>Walk-forward validation with purged gaps (de Prado methodology)</li>
+                            <li>Monte Carlo dropout for uncertainty quantification</li>
+                            <li>Real-time execution via Alpaca API</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>TensorFlow</span>
+                            <span>Stable-Baselines3</span>
+                            <span>Alpaca API</span>
+                            <span>OpenVINO</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                </svg>
+                                View Code
+                            </a>
+                            <a href="#" class="project-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                    <polyline points="15 3 21 3 21 9"/>
+                                    <line x1="10" y1="14" x2="21" y2="3"/>
+                                </svg>
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2: Multi-Ticker Transformer -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="project-visual ml-visual">
+                            <div class="neural-net">
+                                <div class="layer">
+                                    <span></span><span></span><span></span><span></span>
+                                </div>
+                                <div class="layer">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <div class="layer">
+                                    <span></span><span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">Machine Learning</span>
+                        </div>
+                        <h3 class="project-title">Multi-Asset Price Predictor</h3>
+                        <p class="project-description">
+                            Deep learning system for multi-horizon price forecasting across 49 equities 
+                            using attention mechanisms and extensive feature engineering with 40+ 
+                            technical indicators.
+                        </p>
+                        <div class="project-tech">
+                            <span>TensorFlow</span>
+                            <span>Keras</span>
+                            <span>pandas-ta</span>
+                            <span>Scikit-learn</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                </svg>
+                                View Code
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3: Full-Stack App -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="project-visual web-visual">
+                            <div class="browser-mockup">
+                                <div class="browser-bar"></div>
+                                <div class="browser-content">
+                                    <div class="content-block"></div>
+                                    <div class="content-block"></div>
+                                    <div class="content-block small"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">Full-Stack</span>
+                        </div>
+                        <h3 class="project-title">Enterprise Platform</h3>
+                        <p class="project-description">
+                            Scalable full-stack application with real-time data processing, 
+                            user authentication, and modern React frontend with Node.js backend.
+                        </p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>AWS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                    <polyline points="15 3 21 3 21 9"/>
+                                    <line x1="10" y1="14" x2="21" y2="3"/>
+                                </svg>
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">03</span>
+                <h2 class="section-title">Technical Arsenal</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3 class="skill-title">Machine Learning</h3>
+                    <ul class="skill-list">
+                        <li>TensorFlow / Keras / PyTorch</li>
+                        <li>Transformers & Attention</li>
+                        <li>Reinforcement Learning (PPO, SAC)</li>
+                        <li>Time Series Forecasting</li>
+                        <li>Feature Engineering</li>
+                        <li>Model Optimization (ONNX, OpenVINO)</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2v20M2 12h20"/>
+                            <circle cx="12" cy="12" r="10"/>
+                        </svg>
+                    </div>
+                    <h3 class="skill-title">Quantitative Finance</h3>
+                    <ul class="skill-list">
+                        <li>Statistical Arbitrage</li>
+                        <li>Long/Short Market-Neutral</li>
+                        <li>Risk Management (VaR, CVaR)</li>
+                        <li>Backtesting Frameworks</li>
+                        <li>Alpha Research</li>
+                        <li>Trading APIs (Alpaca, IEX)</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                            <line x1="8" y1="21" x2="16" y2="21"/>
+                            <line x1="12" y1="17" x2="12" y2="21"/>
+                        </svg>
+                    </div>
+                    <h3 class="skill-title">Full-Stack Development</h3>
+                    <ul class="skill-list">
+                        <li>React / Next.js / Vue</li>
+                        <li>Node.js / Python / FastAPI</li>
+                        <li>PostgreSQL / MongoDB / Redis</li>
+                        <li>REST & GraphQL APIs</li>
+                        <li>Docker / Kubernetes</li>
+                        <li>AWS / GCP / Azure</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                        </svg>
+                    </div>
+                    <h3 class="skill-title">Tools & Practices</h3>
+                    <ul class="skill-list">
+                        <li>Git / GitHub Actions / CI/CD</li>
+                        <li>Linux / Shell Scripting</li>
+                        <li>Jupyter / Colab / VSCode</li>
+                        <li>Testing (pytest, Jest)</li>
+                        <li>Agile / Scrum</li>
+                        <li>Technical Documentation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section experience" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">04</span>
+                <h2 class="section-title">Experience</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3 class="timeline-title">Quantitative Developer</h3>
+                            <span class="timeline-company">Independent / Research</span>
+                        </div>
+                        <span class="timeline-date">2024 - Present</span>
+                        <ul class="timeline-description">
+                            <li>Developed production-grade algorithmic trading system with Transformer-based price prediction</li>
+                            <li>Implemented reinforcement learning (PPO) for dynamic portfolio optimization achieving 140%+ returns</li>
+                            <li>Built robust backtesting framework with proper train/val/test splits and no lookahead bias</li>
+                            <li>Integrated real-time trading via Alpaca API with risk management controls</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3 class="timeline-title">Full-Stack Software Engineer</h3>
+                            <span class="timeline-company">Technology Company</span>
+                        </div>
+                        <span class="timeline-date">2022 - 2024</span>
+                        <ul class="timeline-description">
+                            <li>Architected and developed scalable web applications serving thousands of users</li>
+                            <li>Led technical initiatives to improve system performance and reliability</li>
+                            <li>Mentored junior developers and conducted code reviews</li>
+                            <li>Implemented CI/CD pipelines and automated testing frameworks</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3 class="timeline-title">Software Engineer</h3>
+                            <span class="timeline-company">Startup</span>
+                        </div>
+                        <span class="timeline-date">2020 - 2022</span>
+                        <ul class="timeline-description">
+                            <li>Built full-stack features from conception to deployment</li>
+                            <li>Developed RESTful APIs and microservices architecture</li>
+                            <li>Optimized database queries and system performance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">05</span>
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-content">
+                <p class="contact-intro">
+                    I'm always interested in hearing about new opportunities, 
+                    challenging projects, or just connecting with fellow engineers and quants.
+                </p>
+                <div class="contact-methods">
+                    <a href="mailto:ricky@example.com" class="contact-card">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                        </div>
+                        <span class="contact-label">Email</span>
+                        <span class="contact-value">ricky@example.com</span>
+                    </a>
+                    <a href="https://github.com/rickyansari" target="_blank" class="contact-card">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                            </svg>
+                        </div>
+                        <span class="contact-label">GitHub</span>
+                        <span class="contact-value">@rickyansari</span>
+                    </a>
+                    <a href="https://linkedin.com/in/rickyansari" target="_blank" class="contact-card">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                <rect x="2" y="9" width="4" height="12"/>
+                                <circle cx="4" cy="4" r="2"/>
+                            </svg>
+                        </div>
+                        <span class="contact-label">LinkedIn</span>
+                        <span class="contact-value">rickyansari</span>
+                    </a>
+                </div>
+                <a href="mailto:ricky@example.com" class="btn btn-primary btn-lg">
+                    <span>Say Hello</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">
+                    Designed & Built by <strong>Ricky Ansari</strong>
+                </p>
+                <p class="footer-tech">
+                    Built with vanilla HTML, CSS & JS. No frameworks, no dependencies.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
