@@ -26,7 +26,7 @@ A sleek, modern personal portfolio website built with vanilla HTML, CSS, and Jav
    git add .
    git commit -m "Initial commit - Personal portfolio"
    git branch -M main
-   git remote add origin https://github.com/rickyansari/rickyansari.github.io.git
+   git remote add origin https://github.com/fansari100/fansari100.github.io.git
    git push -u origin main
    ```
 
