@@ -930,7 +930,7 @@ button {
    ============================================ */
 
 .contact-content {
-    max-width: 700px;
+    max-width: 900px;
     margin: 0 auto;
     text-align: center;
 }
@@ -946,7 +946,6 @@ button {
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-lg);
     margin-bottom: var(--space-2xl);
-    justify-content: center;
 }
 
 .contact-card {
