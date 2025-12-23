@@ -988,8 +988,9 @@ button {
 }
 
 .contact-value {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: var(--text-secondary);
+    white-space: nowrap;
 }
 
 /* ============================================
