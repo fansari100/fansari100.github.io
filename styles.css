@@ -943,9 +943,10 @@ button {
 
 .contact-methods {
     display: grid;
-    grid-template-columns: repeat(3, minmax(280px, 1fr));
-    gap: var(--space-md);
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
     margin-bottom: var(--space-2xl);
+    justify-content: center;
 }
 
 .contact-card {
