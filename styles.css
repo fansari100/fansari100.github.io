@@ -396,7 +396,7 @@ button {
 .hero-subtitle {
     font-family: var(--font-mono);
     font-size: 1.25rem;
-    color: var(--accent-primary);
+    color: #22c55e;
     margin-bottom: var(--space-lg);
     min-height: 1.5em;
     animation: fadeInUp 0.8s ease 0.2s both;

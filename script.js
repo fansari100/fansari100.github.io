@@ -417,10 +417,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const typingElement = document.getElementById('typingText');
     if (typingElement) {
         const words = [
-            'Software Engineer',
             'Quantitative Developer',
-            'Machine Learning Engineer',
-            'Full Stack Developer',
+            'Full-Stack Software Engineer',
             'Problem Solver'
         ];
         new TypeWriter(typingElement, words, 2000);
