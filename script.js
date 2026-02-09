@@ -419,6 +419,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const words = [
             'Quantitative Developer',
             'Full-Stack Software Engineer',
+            'Machine Learning Engineer',
             'Problem Solver'
         ];
         new TypeWriter(typingElement, words, 2000);

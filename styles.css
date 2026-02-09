@@ -1,6 +1,6 @@
 /* ============================================
    RICKY ANSARI - PERSONAL PORTFOLIO
-   Modern, Dark, Sleek Design
+   Modern, Dark, Sleek Design — 2026
    ============================================ */
 
 /* CSS Variables */
@@ -146,6 +146,7 @@ button {
 .nav.scrolled {
     background: rgba(10, 10, 15, 0.9);
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border-color);
     padding: var(--space-md) 0;
 }
@@ -203,11 +204,13 @@ button {
     transition: width var(--transition-base);
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link.active {
     color: var(--text-primary);
 }
 
-.nav-link:hover::after {
+.nav-link:hover::after,
+.nav-link.active::after {
     width: 100%;
 }
 
@@ -509,46 +512,6 @@ button {
     transform: translateY(-3px);
 }
 
-/* Scroll Indicator */
-.scroll-indicator {
-    position: absolute;
-    bottom: var(--space-2xl);
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--space-sm);
-    color: var(--text-tertiary);
-    font-size: 0.75rem;
-    animation: fadeInUp 0.8s ease 0.6s both;
-}
-
-.mouse {
-    width: 24px;
-    height: 38px;
-    border: 2px solid var(--text-tertiary);
-    border-radius: 12px;
-    position: relative;
-}
-
-.wheel {
-    width: 4px;
-    height: 8px;
-    background: var(--text-tertiary);
-    border-radius: 2px;
-    position: absolute;
-    top: 6px;
-    left: 50%;
-    transform: translateX(-50%);
-    animation: scroll 2s ease-in-out infinite;
-}
-
-@keyframes scroll {
-    0%, 100% { opacity: 1; transform: translateX(-50%) translateY(0); }
-    50% { opacity: 0.5; transform: translateX(-50%) translateY(12px); }
-}
-
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -731,6 +694,12 @@ button {
     background: var(--bg-tertiary);
     border-radius: var(--radius-sm);
     color: var(--text-secondary);
+    transition: all var(--transition-fast);
+}
+
+.skill-tag:hover {
+    background: rgba(99, 102, 241, 0.15);
+    color: var(--accent-primary);
 }
 
 /* ============================================
@@ -749,17 +718,21 @@ button {
     border-radius: var(--radius-lg);
     overflow: hidden;
     transition: all var(--transition-base);
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card:hover {
     border-color: var(--accent-primary);
     transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 .project-card.featured {
     grid-column: span 2;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    flex-direction: row;
 }
 
 .project-image {
@@ -768,20 +741,37 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .project-card.featured .project-image {
     aspect-ratio: auto;
+    min-height: 280px;
+}
+
+.project-image::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%);
 }
 
 .project-placeholder {
     color: var(--text-tertiary);
+    transition: all var(--transition-base);
+}
+
+.project-card:hover .project-placeholder {
+    color: var(--accent-primary);
+    transform: scale(1.1);
 }
 
 .project-content {
     padding: var(--space-xl);
     display: flex;
     flex-direction: column;
+    flex: 1;
 }
 
 .project-label {
@@ -789,6 +779,8 @@ button {
     font-size: 0.75rem;
     color: var(--accent-primary);
     margin-bottom: var(--space-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 .project-title {
@@ -797,11 +789,16 @@ button {
     margin-bottom: var(--space-md);
 }
 
+.project-card.featured .project-title {
+    font-size: 1.5rem;
+}
+
 .project-description {
     color: var(--text-secondary);
     font-size: 0.9rem;
     flex: 1;
     margin-bottom: var(--space-lg);
+    line-height: 1.7;
 }
 
 .project-tech {
@@ -815,20 +812,35 @@ button {
     font-family: var(--font-mono);
     font-size: 0.75rem;
     color: var(--accent-primary);
+    background: rgba(99, 102, 241, 0.08);
+    padding: 2px 8px;
+    border-radius: var(--radius-sm);
 }
 
 .project-links {
     display: flex;
     gap: var(--space-md);
+    margin-top: auto;
 }
 
 .project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
     color: var(--text-secondary);
-    transition: color var(--transition-fast);
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all var(--transition-fast);
+    padding: var(--space-xs) 0;
 }
 
 .project-link:hover {
     color: var(--accent-primary);
+}
+
+.project-link span {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
 }
 
 .projects-cta {
@@ -1040,6 +1052,13 @@ button {
     .project-card.featured {
         grid-column: span 1;
         grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .project-card.featured .project-image {
+        aspect-ratio: 16/10;
+        min-height: auto;
     }
 }
 
